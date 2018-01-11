@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/addCgi/addCgi",
+    "pages/search/search",
+    "pages/mine/mine",
+    "pages/mine/heart"
+  ],
+  "tabBar": {
+    "color": "#888888",
+    "backgroundColor": "#FFFFFF",
+    "selectedColor": "#1AAD19",
+    "boarderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "今日",
+        "iconPath": "imgs/tabs/index.png",
+        "selectedIconPath": "imgs/tabs/index_s.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "搜索",
+        "iconPath": "imgs/tabs/search.png",
+        "selectedIconPath": "imgs/tabs/search_s.png"
+      },
+      {
+        "pagePath": "pages/mine/heart",
+        "text": "心愿"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "imgs/tabs/mine.png",
+        "selectedIconPath": "imgs/tabs/mine_s.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1AAD19",
+    "navigationBarTitleText": "XBOX省省省",
+    "navigationBarTextStyle": "white"
+  },
+  "debug": true
+}
