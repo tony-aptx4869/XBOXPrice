@@ -2,15 +2,10 @@
 var qcloud = require('../../vendor/wafer2-client-sdk/index')
 var config = require('../../config')
 var util = require('../../utils/util.js')
+var appInstance = getApp()
+var data = appInstance.globalData
 
 Page({
-    data: {
-        userInfo: {},
-        logged: false,
-        takeSession: false,
-        requestResult: ''
-    },
-
     // 用户登录示例
     login: function() {
         if (this.data.logged) return
