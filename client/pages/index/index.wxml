@@ -1,4 +1,7 @@
 <!--index.wxml-->
+<view class="section_search">
+  <input placeholder="搜索" type="text" confirm-type="search"/>
+</view>
 <view class="container">
   <view class="section section_gap">
     <view class="section__title">horizontal scroll</view>
