@@ -1,7 +1,18 @@
 <!--index.wxml-->
-<view class="section_search">
-  <input placeholder="搜索" type="text" confirm-type="search"/>
+<import src="../../wxSearch/wxSearch.wxml" />
+<view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+            <icon class="weui-icon-search_in-box" type="search" size="16"></icon>
+            <input type="text" class="weui-search-bar__input" confirm-type="search" placeholder="搜索" value="{{wxSearchData.value}}"
+                   bindfocus="wxSerchFocus" bindinput="wxSearchInput" bindblur="wxSearchBlur"  />
+            <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                <icon type="clear" size="14"></icon>
+            </view>
+        </view>
+    </view>
 </view>
+<template is="wxSearch" data="{{wxSearchData}}"  />
 <view class="container">
   <view class="section section_gap">
     <view class="section__title">horizontal scroll</view>
