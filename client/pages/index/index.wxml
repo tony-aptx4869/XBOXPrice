@@ -12,7 +12,7 @@
         </view>
     </view>
 </view>
-<template is="wxSearch" data="{{wxSearchData}}"  />
+<template is="wxSearch" data="{{wxSearchData}}" />
 <view class="container">
   <view class="section section_gap">
     <view class="section__title">horizontal scroll</view>

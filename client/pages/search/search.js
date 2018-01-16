@@ -2,6 +2,7 @@
 var qcloud = require('../../vendor/wafer2-client-sdk/index')
 var config = require('../../config')
 var util = require('../../utils/util.js')
+var WxSearch = require('../../wxSearch/wxSearch.js')
 
 Page({
     data: {

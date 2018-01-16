@@ -1,10 +1,9 @@
 .wxSearch{
-  position: absolute;
-  top: 43px;
+  top: 100px;
   left: 0;
   width: 100%;
   height: 100%;
-  border-top: 1px #eee solid;
+  border-top: 100px;
   background-color: rgba(0, 0, 0, 0.2);
 }
 .wxSearchInner{
@@ -33,7 +32,8 @@
 .wxSearchTitle{
   display: block;
   padding: 10px 5px 5px 10px;
-  font-size: 12px;
+  font-size: 16px;
+  font-weight: 500;
   text-align: center;
 }
 
@@ -53,14 +53,15 @@
 }
 
 .wxSearchKeyItem{
-  flex: 0 0 20%;
-  font-size: 14px;
+  flex: 1 1 1;
+  font-size: 15px;
   text-align: center;
   border: 1px solid #eee;
   margin: 5px;
-  padding: 5px 10px;
+  padding: 6px 10px 6px 10px;
   border-radius: 5px;
 }
+
 .wxSearchHistoryItem{
   padding: 10px 5px;
   border-bottom: 1px solid #eee;

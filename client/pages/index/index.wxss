@@ -1,5 +1,7 @@
 /**index.wxss**/
 @import "../../weui.wxss";
+@import "../../wxSearch/wxSearch.wxss";
+
 page {
     background: #F6F6F6;
     display: flex;
