@@ -5,27 +5,35 @@
         <view class="weui-search-bar__box">
             <icon class="weui-icon-search_in-box" type="search" size="16"></icon>
             <input type="text" class="weui-search-bar__input"
-                   confirm-type="search" placeholder="搜索"
-                   value="{{wxSearchData.value}}"
-                   bindfocus="wxSerchFocus"
-                   bindinput="wxSearchInput"
-                   bindblur="wxSearchBlur" />
+                confirm-type="search" placeholder="搜索"
+                value="{{wxSearchData.value}}"
+                bindfocus="wxSerchFocus"
+                bindinput="wxSearchInput"
+                bindblur="wxSearchBlur" />
             <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
                 <icon type="clear" size="14"></icon>
             </view>
         </view>
     </view>
 </view>
-<template is="wxSearch" data="{{wxSearchData}}" />
-<view class="container">
-  <view class="section section_gap">
-    <view class="section__title">horizontal scroll</view>
-    <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
-    <view id="green" class="scroll-view-item_H bc_green"></view>
-    <view id="red"  class="scroll-view-item_H bc_red"></view>
-    <view id="yellow" class="scroll-view-item_H bc_yellow"></view>
-    <view id="blue" class="scroll-view-item_H bc_blue"></view>
-    </scroll-view>
-  </view>
 
-</view>
+<template is="wxSearch" data="{{wxSearchData}}" />
+
+<!--<view class="banner">-->
+    <swiper class="swiper"
+            indicator-dots="{{bannerData.indicatorDots}}"
+            indicator-color="{{bannerData.indicatorColor}}"
+            indicator-active-color="{{bannerData.indicatorActiveColor}}"
+            autoplay="{{bannerData.autoplay}}"
+            interval="{{bannerData.interval}}"
+            duration="{{bannerData.duration}}"
+            circular="{{bannerData.circular}}"
+            bindtap="swiperTap">
+        <block wx:for="{{bannerData.itemImgs}}" wx:key="unique">
+            <swiper-item>
+                <image  id="{{item.id}}" src="{{item.url}}"
+                        class="swiper-item-img" mode="aspectFill"/>
+            </swiper-item>
+        </block>
+    </swiper>
+<!--</view>-->

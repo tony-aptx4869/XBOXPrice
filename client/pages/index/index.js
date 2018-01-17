@@ -7,9 +7,26 @@ var app         = getApp();
 
 Page( {
     data: {
-
+        bannerData: {
+            itemImgs: [
+                {   id: 111,
+                    url: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'},
+                {   id: 222,
+                    url: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg'},
+                {   id: 333,
+                    url:'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'}
+            ],
+            indicatorDots: true,
+            indicatorColor: "rgba(255, 255, 255, .5)",
+            indicatorActiveColor: "#FFFFFF",
+            autoplay: true,
+            interval: 5000,
+            duration: 500,
+            circular: true
+        }
     },
-  
+
+    // 页面初始化
     onLoad: function () {
         var that = this
 
@@ -88,6 +105,20 @@ Page( {
     wxSearchTap: function (e) {
         var that = this
         WxSearch.wxSearchHiddenPancel(that);
+    },
+
+    swiperTap: function (e) {
+        console.log(e);
+    },
+    
+    // 当swiper轮播图改变时
+    swiperCurrentChange: function (e) {
+        var thar = this
+        console.log(e);
+        // 记录日志，记录swiper轮播图当前页的id
+        //console.log("page/index/index:",
+        //    util.formatTime(new Date),
+        //    "Function * onLoad * Success.");
     }
 
 } )
