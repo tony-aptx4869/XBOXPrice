@@ -1,92 +1,93 @@
 //index.js
-var qcloud = require('../../vendor/wafer2-client-sdk/index')
-var config = require('../../config')
-var util = require('../../utils/util.js')
-var WxSearch = require('../../wxSearch/wxSearch.js')
-var app = getApp();
+var qcloud      = require('../../vendor/wafer2-client-sdk/index')
+var config      = require('../../config')
+var util        = require('../../utils/util.js')
+var WxSearch    = require('../../wxSearch/wxSearch.js')
+var app         = getApp();
 
-Page({
-  data: {
+Page( {
+    data: {
 
-  },
+    },
   
-  onLoad: function () {
-    var that = this
-    // 搜索栏初始化，初始化的时候渲染wxSearchdata
-    WxSearch.init(that, 34,
-      [
-        '战争机器4',
-        '光环5：守护者',
-        '舞力全开2018',
-        'ARCADE GAME SERIES: PAC-MAN',
-        '光之子',
-        '蜡烛人',
-        '使命召唤：二战',
-        '我的世界 故事模式 第二季',
-        '我的世界 故事模式 第一章',
-        '光环：士官长合集'
-      ]
-    );
-    // 搜索栏初始化，设置联想词汇
-    WxSearch.initMindKeys(
-      [
-        '战争机器 4',
-        'Halo 5: Guardians',
-        '舞力全开2018',
-        '光之子',
-        'ARCADE GAME SERIES: PAC-MAN',
-        '蜡烛人',
-        '使命召唤：二战',
-        'Micraft: Story Mode - Season Two',
-        'Micraft: Story Mode',
-        '光环：士官长合集'
-      ]
-    );
-    // 记录日志，函数运行成功
-    console.log("page/index/index:",
-                util.formatTime(new Date),
-                "Function * onLoad * Success.");
-  },
+    onLoad: function () {
+        var that = this
 
-  wxSearchFn: function (e) {
-    var that = this
-    WxSearch.wxSearchAddHisKey(that);
-  },
+        // 搜索栏初始化，初始化的时候渲染wxSearchdata
+        WxSearch.init(that, 34, [
+                '战争机器4',
+                '光环5：守护者',
+                '舞力全开2018',
+                'ARCADE GAME SERIES: PAC-MAN',
+                '光之子',
+                '蜡烛人',
+                '使命召唤：二战',
+                '我的世界 故事模式 第二季',
+                '我的世界 故事模式 第一章',
+                '光环：士官长合集'
+            ]
+        );
 
-  wxSearchInput: function (e) {
-    var that = this
-    WxSearch.wxSearchInput(e, that);
-    console.log(that.data.wxSearchData);
-  },
+        // 搜索栏初始化，设置联想词汇
+        WxSearch.initMindKeys( [
+                '战争机器4',
+                '光环5：守护者',
+                '舞力全开2018',
+                'ARCADE GAME SERIES: PAC-MAN',
+                '光之子',
+                '蜡烛人',
+                '使命召唤：二战',
+                '我的世界 故事模式 第二季',
+                '我的世界 故事模式 第一章',
+                '光环：士官长合集'
+            ]
+        );
 
-  wxSerchFocus: function (e) {
-    var that = this
-    WxSearch.wxSearchFocus(e, that);
-  },
+        // 记录日志，函数运行成功
+        console.log("page/index/index:",
+            util.formatTime(new Date),
+            "Function * onLoad * Success.");
+    },
 
-  wxSearchBlur: function (e) {
-    var that = this
-    WxSearch.wxSearchBlur(e, that);
-  },
+    wxSearchFn: function (e) {
+        var that = this
+        WxSearch.wxSearchAddHisKey(that);
+    },
 
-  wxSearchKeyTap: function (e) {
-    var that = this
-    WxSearch.wxSearchKeyTap(e, that);
-  },
+    wxSearchInput: function (e) {
+        var that = this
+        WxSearch.wxSearchInput(e, that);
+        console.log(that.data.wxSearchData);
+    },
 
-  wxSearchDeleteKey: function (e) {
-    var that = this
-    WxSearch.wxSearchDeleteKey(e, that);
-  },
+    wxSerchFocus: function (e) {
+        var that = this
+        WxSearch.wxSearchFocus(e, that);
+    },
 
-  wxSearchDeleteAll: function (e) {
-    var that = this;
-    WxSearch.wxSearchDeleteAll(that);
-  },
+    wxSearchBlur: function (e) {
+        var that = this
+        WxSearch.wxSearchBlur(e, that);
+    },
 
-  wxSearchTap: function (e) {
-    var that = this
-    WxSearch.wxSearchHiddenPancel(that);
-  }
+    wxSearchKeyTap: function (e) {
+        var that = this
+        WxSearch.wxSearchKeyTap(e, that);
+    },
 
-})
+    wxSearchDeleteKey: function (e) {
+        var that = this
+        WxSearch.wxSearchDeleteKey(e, that);
+    },
+
+    wxSearchDeleteAll: function (e) {
+        var that = this;
+        WxSearch.wxSearchDeleteAll(that);
+    },
+
+    wxSearchTap: function (e) {
+        var that = this
+        WxSearch.wxSearchHiddenPancel(that);
+    }
+
+} )
