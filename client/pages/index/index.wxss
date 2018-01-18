@@ -2,13 +2,6 @@
 @import "../../weui.wxss";
 @import "../../wxSearch/wxSearch.wxss";
 
-page {
-    background: #F6F6F6;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
 .banner {
     width: 100%;
     height: 468.75rpx;
@@ -39,6 +32,4 @@ page {
     box-sizing: border-box;
 }
 
-.disable {
-    color: #888;
-}
+

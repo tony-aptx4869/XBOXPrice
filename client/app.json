@@ -1,7 +1,6 @@
 {
     "pages": [
         "pages/index/index",
-        "pages/addCgi/addCgi",
         "pages/search/search",
         "pages/mine/mine",
         "pages/mine/heart",
@@ -26,8 +25,8 @@
             }, {
                 "pagePath": "pages/logs/logs",
                 "text": "日志",
-                "iconPath": "imgs/tabs/search.png",
-                "selectedIconPath": "imgs/tabs/search_s.png"
+                "iconPath": "imgs/tabs/log.png",
+                "selectedIconPath": "imgs/tabs/log_s.png"
             }, {
                 "pagePath": "pages/mine/mine",
                 "text": "我的",

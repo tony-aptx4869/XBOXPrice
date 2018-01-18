@@ -1,6 +1,22 @@
 <!--logs.wxml-->
-<view class="container log-list">
-  <block wx:for="{{logs}}" wx:for-item="log" wx:key="*this">
-    <text class="log-item">{{index + 1}}. {{log}}</text>
-  </block>
+<view class="page">
+
+    <view class="page__hd">
+        <view class="page__title">日志</view>
+    </view>
+
+    <view class="weui-cells weui-cells_after-title">
+        <block wx:for="{{logs}}" wx:for-item="log" wx:key="*this">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">{{log}}</view>
+            </view>
+        </block>
+    </view>
+
+    <view class="page__ft">
+        <view class='page__ft_text_warning'>
+            日志仅用于开发人员测试排错，不对普通用户负责！
+        </view>
+    </view>
+
 </view>

@@ -1,39 +1,68 @@
 <!--index.wxml-->
 <import src="../../wxSearch/wxSearch.wxml" />
-<view class="weui-search-bar">
-    <view class="weui-search-bar__form">
-        <view class="weui-search-bar__box">
-            <icon class="weui-icon-search_in-box" type="search" size="16"></icon>
-            <input type="text" class="weui-search-bar__input"
-                confirm-type="search" placeholder="搜索"
-                value="{{wxSearchData.value}}"
-                bindfocus="wxSerchFocus"
-                bindinput="wxSearchInput"
-                bindblur="wxSearchBlur" />
-            <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
-                <icon type="clear" size="14"></icon>
+
+<view class="page">
+
+    <view class="weui-search-bar">
+        <view class="weui-search-bar__form">
+            <view class="weui-search-bar__box">
+                <icon class="weui-icon-search_in-box" type="search" size="16"></icon>
+                <input type="text" class="weui-search-bar__input"
+                    confirm-type="search" placeholder="搜索"
+                    value="{{wxSearchData.value}}"
+                    bindfocus="wxSerchFocus"
+                    bindinput="wxSearchInput"
+                    bindblur="wxSearchBlur" />
+                <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                    <icon type="clear" size="14"></icon>
+                </view>
             </view>
         </view>
     </view>
-</view>
 
-<template is="wxSearch" data="{{wxSearchData}}" />
+    <template is="wxSearch" data="{{wxSearchData}}" />
 
-<!--<view class="banner">-->
     <swiper class="swiper"
-            indicator-dots="{{bannerData.indicatorDots}}"
-            indicator-color="{{bannerData.indicatorColor}}"
-            indicator-active-color="{{bannerData.indicatorActiveColor}}"
-            autoplay="{{bannerData.autoplay}}"
-            interval="{{bannerData.interval}}"
-            duration="{{bannerData.duration}}"
-            circular="{{bannerData.circular}}"
+            indicator-dots="{{banner.indicatorDots}}"
+            indicator-color="{{banner.indicatorColor}}"
+            indicator-active-color="{{banner.indicatorActiveColor}}"
+            autoplay="{{banner.autoplay}}"
+            interval="{{banner.interval}}"
+            duration="{{banner.duration}}"
+            circular="{{banner.circular}}"
             bindtap="swiperTap">
-        <block wx:for="{{bannerData.itemImgs}}" wx:key="unique">
+        <block wx:for="{{banner.itemImgs}}" wx:key="this">
             <swiper-item>
-                <image  id="{{item.id}}" src="{{item.url}}"
+                <image  id="{{item.id}}" src="{{item.src}}"
                         class="swiper-item-img" mode="aspectFill"/>
             </swiper-item>
         </block>
     </swiper>
-<!--</view>-->
+
+<!--
+    <view class="weui-cells weui-cells_after-title">
+        <block wx:for="{{category}}" wx:for-item="cate" wx:key="this">
+            <navigator  url=""
+                        class="weui-cell weui-cell_access"
+                        hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image  src="{{icon}}" 
+                            style="margin-right: 5px; vertical-align: middle; width: 20px; height: 20px;">
+                    </image>
+                </view>
+                <view class="weui-cell__bd">{{cate.title}}</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">说明文字</view>
+            </navigator>
+        </block>
+    </view>
+-->
+
+    <view class="weui-grids">
+        <block wx:for="{{category}}" wx:for-item="cate" wx:key="this">
+            <navigator url="" class="weui-grid" hover-class="weui-grid_active">
+                    <image class="weui-grid__icon" src="{{cate.icon}}" />
+                    <view class="weui-grid__label">{{cate.title}}</view>
+                </navigator>
+        </block>
+    </view>
+</view>
