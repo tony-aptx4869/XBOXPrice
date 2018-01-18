@@ -8,13 +8,16 @@ var app         = getApp();
 Page( {
     data: {
         bannerData: {
-            itemImgs: [
-                {   id: 111,
-                    url: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'},
-                {   id: 222,
-                    url: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg'},
-                {   id: 333,
-                    url:'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'}
+            itemImgs: [ {
+                    id: 111,
+                    url: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'
+                }, {
+                    id: 222,
+                    url: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg'
+                }, {
+                    id: 333,
+                    url:'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
+                }
             ],
             indicatorDots: true,
             indicatorColor: "rgba(255, 255, 255, .5)",
