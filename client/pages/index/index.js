@@ -59,8 +59,12 @@ Page( {
             }, {
                 id: 7,
                 title: '免费DLC',
-                icon: ''
-            }, 
+                icon: '../../imgs/category/freeDLC.png'
+            }, {
+                id: 8,
+                title: '版本更新',
+                icon: '../../imgs/category/update.png'
+            }
 
         ]
     },
